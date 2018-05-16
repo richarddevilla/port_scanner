@@ -69,7 +69,6 @@ def main():
         except:
             messagebox.showerror('Unknown Host!')
             return
-        print(ports)
         for port,values in ports.items():
             t = Thread(target=scan_conn, args=(host,values['port'],values['name']))
             t.start()
